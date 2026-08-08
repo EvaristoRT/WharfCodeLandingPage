@@ -1,0 +1,37 @@
+:root{
+    --primary: #121212;
+    --secondary: #4A5568;
+    --tertiary: #FFFFFF;
+
+    --titles: "Sora", sans-serif;
+    --text: "Inter", sans-serif;
+    --text-secondary: "JetBrains Mono", monospace;
+
+    --borders: #D1D9E0;
+}
+body{
+    margin: 0;
+    padding: 90px 0 0 0;
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-family: var(--titles);
+    color: var(--primary);
+}
+p, li{
+    font-family: var(--text);
+    color: var(--secondary);
+}
+
+button{
+    font-family: var(--text-secondary);
+}
+
+a{
+    font-family: var(--text);
+    text-decoration: none;
+}
+
+li{
+    list-style: none;
+}

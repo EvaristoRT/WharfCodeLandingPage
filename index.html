@@ -4,15 +4,69 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wharf</title>
-    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Sora:wght@100..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Sora:wght@100..800&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
     <header>
-        <nav>
-            
+        <nav class="nav-pc">
+            <a href="index.html"><h1>Wharf Code</h1></a>
+            <div class="nav-links">
+                <ul>
+                    <li class="nav-links__link active">Inicio</li>
+                    <li class="nav-links__link">Soluciones</li>
+                    <li class="nav-links__link">Nosotros</li>
+                    <li class="nav-links__link">Contacto</li>
+                </ul>
+            </div>
+            <button class="nav-links__button-projects">CUÉNTANOS TU PROYECTO <i data-lucide="arrow-right"></i></button>
+            <button class="nav__menu">
+                <i data-lucide="menu"></i>
+            </button>
+        </nav>
+        <nav class="side-menu">
+            <div class="side-menu__top">
+                <h1>Wharf Code</h1>
+                <button class="side-menu__close">
+                    <i data-lucide="x"></i>
+                </button>
+            </div>
+        
+            <ul>
+                <li class="nav-links__link active"><a href="index.html">Inicio</a></li>
+                <li class="nav-links__link"><a href="soluciones.html">Soluciones</a></li>
+                <li class="nav-links__link"><a href="nosotros.html">Nosotros</a></li>
+                <li class="nav-links__link"><a href="contacto.html">Contacto</a></li>
+            </ul>
+            <button class="nav-links__button-projects__side-menu">CUÉNTANOS TU PROYECTO <i data-lucide="arrow-right"></i></button>
+            <div class="side-menu__contact-section">
+                <div class="side-menu__contact-section__column">
+                    <p>Social</p>
+                    <a href="">LinkedIn</a>
+                    <a href="">Instagram</a>
+                    <a href="">Facebook</a>
+                </div>
+                <div class="side-menu__contact-section__column">
+                    <p>Contacto</p>
+                    <p>contacto@wharfcode.com</p>
+                </div>
+            </div>
         </nav>
     </header>
     <main></main>
     <footer></footer>
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script>
+        lucide.createIcons();
+    </script>
+    <script src="js/nav.js"></script>
 </body>
 </html>
