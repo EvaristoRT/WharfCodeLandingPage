@@ -8,15 +8,23 @@
     --text-secondary: "JetBrains Mono", monospace;
 
     --borders: #D1D9E0;
+
+    --background-primary: #FCF8F9;
+    --background-secondary: #EEECFF;
+
 }
 body{
     margin: 0;
     padding: 90px 0 0 0;
+    background-color: var(--background-primary);
 }
 
 h1,h2,h3,h4,h5,h6{
     font-family: var(--titles);
     color: var(--primary);
+}
+h2{
+    font-size: 2rem;
 }
 p, li{
     font-family: var(--text);
@@ -34,4 +42,53 @@ a{
 
 li{
     list-style: none;
+}
+
+.button{
+    border: none;
+    outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem 1.2rem;
+    box-sizing: border-box;
+    cursor: pointer;
+    font-family: var(--text-secondary);
+}
+
+.button svg{
+    transition: transform .5s ease;
+}
+
+.button.primary:hover{
+    background-color: var(--secondary);
+    cursor: pointer;
+}
+
+.button.secondary{
+    color: var(--primary);
+}
+
+.button.secondary:hover{
+    background-color: var(--background-secondary);
+}
+
+.button:hover svg{
+    transform: translateX(5px);
+    transition: transform .5s ease;
+}
+
+.button.primary{
+    background-color: var(--primary);
+    color: var(--tertiary);
+}
+
+.button.secondary{
+    background-color: transparent;
+    border: 2px solid var(--primary);
+}
+
+::-webkit-scrollbar{
+    display: none;
 }
