@@ -129,6 +129,10 @@ nav{
     transition: transform .3s ease;
 }
 
+.nav-links__link a{
+    color: var(--primary);
+}
+
 .nav-links__link:hover{
     cursor: pointer;
 }
