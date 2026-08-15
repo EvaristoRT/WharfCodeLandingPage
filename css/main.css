@@ -7,6 +7,9 @@
     --neutral: #F8FAFC;
     --color-button-text: #00344D;
     --color-button-text-outlined: #E0E3E5;
+    --color-label: rgb(137, 206, 255);
+    --color-label-10: rgba(137, 206, 255, 0.1);
+    --color-label-30: rgba(137, 206, 255, 0.3);
 
     --titles: "Hanken Grotesk", sans-serif;
     --text: "Inter", sans-serif;
