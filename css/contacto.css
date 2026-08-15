@@ -1,0 +1,40 @@
+.contacto{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "encabezado"
+    "formulario"
+    "info-contacto";
+    padding: 1rem;
+}
+
+.formulario-contacto{
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.campo-contacto{
+    border: none;
+    padding: 1rem;
+}
+
+.campo-contacto:focus{
+    background-color: var(--background-secondary);
+}
+
+.contacto h1{
+    font-size: 3rem;
+}
+
+.contacto-encabezado{
+    grid-area: encabezado;
+}
+
+.formulario-contacto{
+    grid-area: formulario;
+}
+
+.info-contacto{
+    grid-area: info-contacto;
+}
