@@ -201,6 +201,12 @@
     padding: 1rem;
     background-color: var(--background-secondary);
     box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
 }
 
 .develop-steps__container{
@@ -212,12 +218,24 @@
 }
 
 .develop-steps__step{
-    border-top: 3px solid var(--borders);
+    border-top: 3px solid var(--step-color);
     padding: 1rem;
     box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
 }
 .develop-steps__step__number{
-    font-size: .8rem;
+    font-size: 2rem;
+    border: 3px solid var(--step-color);
+    border-radius: 1rem;
+    box-shadow: 0 0 12px var(--step-color);
+    color: var(--step-color);
+    padding: 1rem;
+    width: 75px;
+    height: 75px;
 }
 .develop-steps__step__title{
     font-size: 1.7rem;
@@ -225,6 +243,14 @@
 
 .develop-steps__step__description{
     font-size: 1.2rem
+}
+
+.step-odd{
+    --step-color: var(--secondary)
+}
+
+.step-even{
+    --step-color: var(--tertiary)
 }
 
 .provider{
@@ -298,7 +324,7 @@
         flex-wrap: wrap;
     }
     .develop-steps__step{
-        width: calc((100% - 2rem)/3);
+        width: calc((100% - 2rem)/2);
     }
 }
 
@@ -342,6 +368,10 @@
     }
     .solutions__container__solution{
         width: calc(50% - 1rem);
+    }
+
+    .develop-steps{
+        height: 600px;
     }
 
     .develop-steps__step{
