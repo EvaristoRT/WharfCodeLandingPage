@@ -270,6 +270,53 @@
     height: 2rem;
 }
 
+.why-wharf{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1rem;
+    text-align: center;
+}
+
+.values-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.value{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    padding: .5rem 1rem;
+    width: 200px;
+    background-color: var(--background-tertiary);
+    border: 3px solid transparent;
+    border-radius: 1rem;
+    transition: box-shadow .3s ease;
+    font-size: 1.2rem;
+}
+
+.value:hover{
+    box-shadow: 0px 0px 5px var(--neutral);
+}
+
+.value svg{
+    color: var(--value-color);
+}
+
+.value-odd{
+    --value-color: var(--secondary)
+}
+
+.value-even{
+    --value-color: var(--tertiary)
+}
+
 
 .provider{
     width: 100%;
@@ -359,6 +406,15 @@
     .phrase2 p{
         width: 70%;
     }
+
+    .values-container{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .value{
+        width: calc((100% - 1rem)/2);
+    }
 }
 
 @media (min-width:1024px){
@@ -409,6 +465,16 @@
 
     .develop-steps__step{
         width: calc((100% - 3rem)/4);
+    }
+
+    .why-wharf{
+        height: 500px;
+        justify-content: center;
+    }
+
+    .value{
+        width: calc((100% - 3rem)/4);
+        height: 100px;
     }
     .provider{
         flex-direction: row;
