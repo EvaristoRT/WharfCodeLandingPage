@@ -92,7 +92,7 @@
 .phrase{
     width: 100%;
     height: 500px;
-    background-color: var(--primary);
+    background-color: var(--background-secondary);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -100,55 +100,80 @@
     text-align: center;
     box-sizing: border-box;
     padding: 1rem;
-}
-
-.phrase-title{
-    color: var(--tertiary);
-    font-size: 2rem;
-    font-weight: bold;
+    gap: 1rem;
 }
 
 .phrase-description{
-    color: var(--background-secondary);
+    color: var(--neutral);
     width:100%
 }
 
 .solutions{
     display: flex;
     flex-direction: column;
+    align-items: center;
+    gap: 2rem;
     padding: 1rem;
+}
+
+.solutions h2, .solutions > p:first-of-type{
+    text-align: center;
+    color: var(--neutral);
 }
 
 .solutions__container{
     display: flex;
     flex-direction: column;
-    background-color: var(--borders);
-    gap: .1rem;
+    background-color: var(--background-primary);
+    gap: 1rem;
 }
 
 .solutions__container__solution{
     display: flex;
     flex-direction: column;
-    background-color: var(--background-primary);
+    background-color: var(--background-secondary);
     padding: 1rem;
+    gap: 1rem;
     position: relative;
     box-sizing: border-box;
     width: 100%;
-    transition: background-color .2s ease;
+    transition: background-color .2s ease, border-color .3s ease;
+    height: 175px;
+    border: 2px solid transparent;
+    border-radius: 1rem;
 }
 
 .solutions__container__solution:hover{
-    background-color: var(--background-secondary);
-    transition: background-color .2s ease;
+    border-color: var(--solution-color);
+}
+
+.solutions__container__solution:hover h3{
+    color: var(--solution-color);
+    transition: color .2s ease;
 }
 
 .solutions__container__solution__icon{
     position: absolute;
+    color: var(--solution-color);
     top: 2rem;
     right: 2rem;
     width: 2rem;
     height: 2rem;
 }
+
+#solution-1{
+    --solution-color: var(--secondary)
+}
+#solution-2{
+    --solution-color: var(--secondary-hover)
+}
+#solution-3{
+    --solution-color: var(--tertiary-hover)
+}
+#solution-4{
+    --solution-color: var(--tertiary-hover)
+}
+
 
 .solutions__container__solution__title{
     width: 50%;
@@ -246,7 +271,7 @@
 
 .phrase h2{
     font-weight: 900;
-    color: var(--tertiary);
+    color: var(--neutral);
     font-size: 3rem;
 }
 
@@ -261,6 +286,13 @@
 }
 
 @media (min-width:768px){
+    .solutions__container__solution h3{
+        font-size: 1.8rem;
+        width: 80%;
+    }
+    .solutions__container__solution p{
+        font-size: 1.2rem;
+    }
     .develop-steps__container{
         flex-direction: row;
         flex-wrap: wrap;
@@ -300,21 +332,16 @@
         gap: 1rem;
     }
     
-    .phrase-title{
-        color: var(--tertiary);
-        font-size: 2rem;
-    }
-    
     .phrase-description{
-        color: var(--background-secondary);
         width:50%
     }
     .solutions__container{
         flex-direction: row;
         flex-wrap: wrap;
+        justify-content: center;
     }
     .solutions__container__solution{
-        width: calc(50% - .05rem);
+        width: calc(50% - 1rem);
     }
 
     .develop-steps__step{
