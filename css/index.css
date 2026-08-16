@@ -253,6 +253,24 @@
     --step-color: var(--tertiary)
 }
 
+.phrase2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 1rem;
+    padding: 1rem;
+    background-color: var(--background-tertiary);
+}
+
+.phrase2 svg{
+    color: var(--secondary);
+    width: 2rem;
+    height: 2rem;
+}
+
+
 .provider{
     width: 100%;
     box-sizing: border-box;
@@ -316,15 +334,30 @@
         font-size: 1.8rem;
         width: 80%;
     }
+
     .solutions__container__solution p{
         font-size: 1.2rem;
     }
+
     .develop-steps__container{
         flex-direction: row;
         flex-wrap: wrap;
     }
+
     .develop-steps__step{
         width: calc((100% - 2rem)/2);
+    }
+
+    .phrase2{
+        height: 500px;
+    }
+    .phrase2 h2{
+        font-size: 3rem;
+        width: 70%;
+    }
+
+    .phrase2 p{
+        width: 70%;
     }
 }
 
