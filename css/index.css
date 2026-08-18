@@ -349,6 +349,24 @@
     background-color: var(--background-tertiary);
 }
 
+.phrase3{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 1rem;
+    background-color: var(--background-tertiary);
+    padding: 1rem;
+    width: 100%;
+    height: 500px;
+}
+
+.phrase3 > p:last-of-type{
+    color: var(--secondary);
+    font-size: 1.5rem;
+}
+
 
 .provider{
     width: 100%;
@@ -528,6 +546,23 @@
 
     .us-container{
         width: 50%;
+    }
+
+    .phrase3{
+        gap: 2rem;
+    }
+
+    .phrase3 h2{
+        font-size: 4rem;
+    }
+
+    .phrase3 p{
+        width: 50%;
+    }
+
+    .phrase3 > p:last-of-type{
+        color: var(--secondary);
+        font-size: 1.5rem;
     }
     .provider{
         flex-direction: row;
