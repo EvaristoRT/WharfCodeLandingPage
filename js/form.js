@@ -1,10 +1,10 @@
 const form = document.querySelector(".contact__form");
 const nombre = document.getElementById("nombre");
-const correo = document.getElementById("email"); // O el ID que tenga tu input de correo
+const correo = document.getElementById("correo");
 const proyecto = document.getElementById("proyecto");
 const textArea = document.getElementById("descripcion");
 const projectDescriptionLenght = document.getElementById("project-description-lenght");
-const honeypot = document.getElementById("honeypot"); // Ajusta el ID según tu HTML
+const honeypot = document.getElementById("website_hp"); // Ajusta el ID según tu HTML
 
 const errorContainer = document.getElementById("error-message");
 const submitBtn = form ? form.querySelector("button[type='submit']") : null;
