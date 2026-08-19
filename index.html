@@ -14,7 +14,7 @@
 <body>
     <header>
         <nav class="nav-pc">
-            <a href="#inicio" class="nav-logo">Wharf Code</a>
+            <a href="#hero" class="nav-logo">Wharf Code</a>
             <div class="nav-links">
                 <ul>
                     <li class="nav-links__link"><a href="#soluciones">Soluciones</a></li>
@@ -23,7 +23,7 @@
                     <li class="nav-links__link"><a href="#contacto">Contacto</a></li>
                 </ul>
             </div>
-            <a class="button secondary" id="nav__button-contacto">Contactar</a>
+            <a class="button secondary" id="nav__button-contacto" href="#contacto">Contactar</a>
             <button class="nav__menu">
                 <i data-lucide="menu"></i>
             </button>
@@ -37,12 +37,12 @@
             </div>
         
             <ul>
-                <li class="nav-links__link"><i data-lucide="house"></i><a href="index.html">Inicio</a></li>
-                <li class="nav-links__link"><i data-lucide="wrench"></i><a href="soluciones.html">Soluciones</a></li>
-                <li class="nav-links__link"><i data-lucide="rotate-ccw-clock"></i><a href="nosotros.html">Nosotros</a></li>
-                <li class="nav-links__link"><i data-lucide="mail"></i><a href="contacto.html">Contacto</a></li>
+                <li class="nav-links__link"><i data-lucide="house"></i><a href="#hero">Inicio</a></li>
+                <li class="nav-links__link"><i data-lucide="wrench"></i><a href="#soluciones">Soluciones</a></li>
+                <li class="nav-links__link"><i data-lucide="rotate-ccw-clock"></i><a href="#nosotros">Nosotros</a></li>
+                <li class="nav-links__link"><i data-lucide="mail"></i><a href="#contacto">Contacto</a></li>
             </ul>
-            <a class="button secondary">CUÉNTANOS TU PROYECTO <i data-lucide="arrow-right"></i></a>
+            <a class="button secondary" href="#contacto">CUÉNTANOS TU PROYECTO <i data-lucide="arrow-right"></i></a>
             <div class="side-menu__contact-section">
                 <div class="side-menu__contact-section__column">
                     <p>Social</p>
@@ -58,14 +58,14 @@
         </nav>
     </header>
     <main>
-        <section class="hero">
+        <section class="hero" id="hero">
             <div class="hero__text-container">
                 <p id="hero__label"><i data-lucide="square-terminal"></i>Ingeniería y Automatización</p>
                 <h1>Soluciones Digitales que Impulsan tu PYME.</h1>
                 <p>Automatizamos procesos complejos y desarrollamos software profesional a medida. Superamos la brecha entre la ingeniería técnica y la elegancia empresarial para transformar tu negocio sin fricción.</p>
                 <div class="hero__text-container__buttons">
-                    <a class="button primary">NUESTROS SERVICIOS<i data-lucide="arrow-right"></i></a>
-                    <a class="button outlined">CONOCE WHARF<i data-lucide="arrow-right"></i></a>
+                    <a class="button primary" href="#soluciones">NUESTROS SERVICIOS<i data-lucide="arrow-right"></i></a>
+                    <a class="button outlined" href="#nosotros">CONOCE WHARF<i data-lucide="arrow-right"></i></a>
                 </div>
             </div>
             <img src="images/WharfLogo.webp" alt="Logotipo de la empresa Wharf Code">
@@ -74,7 +74,7 @@
             <h2>La tecnología tiene valor cuando resuelve algo real.</h2>
             <p class="phrase-description">Creemos que el cliente es quien mejor conoce su problema. Nuestro trabajo es escuchar, entender la complejidad de su negocio y construir la solución tecnológica precisa que convierta ese problema en una ventaja competitiva. No imponemos herramientas; diseñamos soluciones.</p>
         </section>
-        <section class="solutions">
+        <section class="solutions" id="soluciones">
             <h2>Nuestros Servicios</h2>
             <p>Experiencia técnica aplicada para resolver desafíos comerciales reales.</p>
             <div class="solutions__container">
@@ -100,7 +100,7 @@
                 </div>
             </div>
         </section>
-        <section class="develop-steps">
+        <section class="develop-steps" id="proceso">
             <h2>Cómo Trabajamos</h2>
             <p>Un proceso metódico diseñado para garantizar resultados excepcionales y transparencia en cada etapa.</p>
             <div class="develop-steps__container">
@@ -131,7 +131,7 @@
             <h2>"No vendemos software, vendemos soluciones a tus problemas."</h2>
             <p>Nuestra filosofía se basa en la colaboración profunda. Creemos que la tecnología por sí sola no tiene valor a menos que resuelva un problema real de manera eficiente. Nos enfocamos en entender el núcleo de tus desafíos comerciales antes de sugerir herramientas técnicas.</p>
         </section>
-        <section class="us" id="us">
+        <section class="us" id="nosotros">
             <img src="images/WharfLogo.webp" alt="Logotipo de Wharf Code">
             <div class="us-container">
                 <h2>Nuestro Origen</h2>
@@ -159,7 +159,7 @@
             <p>Nuestras arquitecturas están pensadas para crecer contigo. Ya sea que seas una pequeña empresa emergente o una organización establecida, construimos sistemas que se adapten a tu escala operativa.</p>
             <p>"Cada empresa tiene problemas diferentes. La solución también debería serlo."</p>
         </section>
-        <section class="contact">
+        <section class="contact" id="contacto">
             <form class="contact__form" novalidate>
                 <h2>¿Tienes un problema que podamos resolver?</h2>
                 <p>Iniciemos una conversación sobre cómo podemos impulsar tu negocio.</p>
@@ -210,7 +210,7 @@
     </main>
     <footer class="footer">
         <div class="footer__info-container">
-            <h2><a href="index.html">Wharf Code</a></h2>
+            <h2><a href="#hero">Wharf Code</a></h2>
             <p>Construyendo arquitecturas digitales desde Veracruz para el mundo.</p>
             <p>© 2026 Wharf Code.</p>
             <p>Hecho en Veracruz.</p>
@@ -218,10 +218,10 @@
         <div class="footer__links-container">
             <ul>
                 <li>Navegación</li>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="soluciones.html">Soluciones</a></li>
-                <li><a href="nosotros.html">Nosotros</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="#hero">Inicio</a></li>
+                <li><a href="#soluciones">Soluciones</a></li>
+                <li><a href="#nosotros">Nosotros</a></li>
+                <li><a href="#contacto">Contacto</a></li>
             </ul>
             <ul>
                 <li>Social</li>
