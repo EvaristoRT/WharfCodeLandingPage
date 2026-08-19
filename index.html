@@ -159,6 +159,54 @@
             <p>Nuestras arquitecturas están pensadas para crecer contigo. Ya sea que seas una pequeña empresa emergente o una organización establecida, construimos sistemas que se adapten a tu escala operativa.</p>
             <p>"Cada empresa tiene problemas diferentes. La solución también debería serlo."</p>
         </section>
+        <section class="contact">
+            <form class="contact__form" novalidate>
+                <h2>¿Tienes un problema que podamos resolver?</h2>
+                <p>Iniciemos una conversación sobre cómo podemos impulsar tu negocio.</p>
+                <div class="hp-field" aria-hidden="true">
+                    <label for="website_hp">No llenes este campo si eres humano:</label>
+                    <input type="text" name="website_hp" id="website_hp" tabindex="-1" autocomplete="off">
+                </div>
+                <div class="contact__form__top">
+                    <div>
+                        <label for="nombre">Nombre</label>
+                        <input type="text" name="nombre" id="nombre">
+                    </div>
+                    <div>
+                        <label for="empresa">Empresa (Opcional)</label>
+                        <input type="text" name="empresa" id="empresa">
+                    </div>
+                </div>
+                <div class="input-container">
+                    <label for="correo">Correo Electrónico</label>
+                    <input type="email" name="correo" id="correo">
+                </div>
+                <div class="input-container">
+                    <label for="proyecto">Tipo de Proyecto</label>
+
+                    <div class="select-container">
+                        <select name="proyecto" id="proyecto">
+                            <option value="">Seleccione una Opción</option>
+                            <option value="medida">Software a Medida</option>
+                            <option value="automatizacion">Automatización</option>
+                            <option value="web">Desarrollo Web</option>
+                            <option value="consultoria">Consultoría Tecnológica</option>
+                        </select>
+                    
+                        <i data-lucide="chevron-down"></i>
+                    </div>
+                </div>
+                <div class="input-container">
+                    <div class="project-description-container">
+                        <label for="descripcion">Descripción del Proyecto (Opcional)</label>
+                        <textarea name="descripcion" id="descripcion" maxlength="500"></textarea>
+                        <p id="project-description-lenght"></p>
+                    </div>
+                </div>
+                <div id="error-message" class="error-box" style="display: none;"></div>
+                <button class="button primary">Enviar Mensaje</button>
+            </form>
+        </section>
     </main>
     <footer class="footer">
         <div class="footer__info-container">
@@ -190,5 +238,6 @@
         lucide.createIcons();
     </script>
     <script src="js/nav.js"></script>
+    <script src="js/form.js"></script>
 </body>
 </html>
