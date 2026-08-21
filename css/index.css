@@ -1,7 +1,7 @@
 .hero{
     display: flex;
     flex-direction: column-reverse;
-    padding: 2rem 1rem;
+    padding: calc(90px + 2rem) 1rem 2rem 1rem;
     width: 100vw;
     max-width: 100vw;
     overflow: hidden;
@@ -509,6 +509,18 @@
     width: 0;
     z-index: -1;
     overflow: hidden;
+}
+/* Estado inicial (oculto y un poco más abajo) */
+.animar-scroll {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s ease-out; /* Controla la velocidad de la animación */
+}
+
+/* Estado final (visible en su posición original) */
+.animar-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 @media (min-width:768px){
