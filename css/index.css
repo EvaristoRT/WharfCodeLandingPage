@@ -253,23 +253,6 @@
     --step-color: var(--tertiary)
 }
 
-.phrase2{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    gap: 1rem;
-    padding: 1rem;
-    background-color: var(--background-tertiary);
-}
-
-.phrase2 svg{
-    color: var(--secondary);
-    width: 2rem;
-    height: 2rem;
-}
-
 .why-wharf{
     display: flex;
     flex-direction: column;
@@ -542,18 +525,6 @@
         width: calc((100% - 2rem)/2);
     }
 
-    .phrase2{
-        height: 500px;
-    }
-    .phrase2 h2{
-        font-size: 3rem;
-        width: 70%;
-    }
-
-    .phrase2 p{
-        width: 70%;
-    }
-
     .values-container{
         flex-direction: row;
         flex-wrap: wrap;
@@ -668,3 +639,172 @@
     }
 
 }
+
+/* ===== Refinamiento: layout, animaciones y accesibilidad ===== */
+
+html{scrollbar-width:thin;scrollbar-color:var(--borders) var(--background-primary);scroll-behavior:smooth;scroll-padding-top:90px}
+::-webkit-scrollbar{display:block;width:8px}
+::-webkit-scrollbar-thumb{background:var(--borders);border-radius:8px}
+
+/* contenedor: el contenido deja de estirarse en pantallas grandes */
+:root{--gutter:clamp(1.5rem,6vw,3rem)}
+main > section[class], .footer{padding-left:max(var(--gutter),calc((100% - 1200px)/2));padding-right:max(var(--gutter),calc((100% - 1200px)/2))}
+.hero{width:100%;max-width:100%}
+
+nav{padding-left:max(var(--gutter),calc((100% - 1200px)/2));padding-right:max(var(--gutter),calc((100% - 1200px)/2));backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid #ffffff12}
+
+/* sin alturas fijas que desbordan */
+.phrase,.phrase3,.develop-steps,.why-wharf,.us,.solutions__container__solution{height:auto}
+.phrase,.phrase3{min-height:380px;padding:5rem 1rem}
+.develop-steps,.why-wharf,.us,.solutions{padding-top:5rem;padding-bottom:5rem}
+.solutions__container__solution{min-height:175px}
+.solutions__container__solution__title{width:80%}
+.phrase h2,.phrase3 h2{font-size:clamp(2rem,6vw,4rem)}
+.phrase-description,.phrase p,.phrase3 p{max-width:65ch;width:100%}
+.phrase h2{max-width:20ch;width:100%}
+.us-container p{max-width:65ch}
+
+/* ritmo: las secciones se distinguen con el mismo lenguaje de brillo del hero */
+.phrase,.phrase3{position:relative;overflow:hidden}
+.phrase{background:radial-gradient(ellipse at 50% 0%,rgba(45,212,191,.14),transparent 60%),var(--background-secondary)}
+.phrase3{background:radial-gradient(ellipse at 50% 0%,rgba(45,212,191,.14),transparent 60%),var(--background-tertiary)}
+main > section + section{border-top:1px solid #ffffff10}
+
+/* hero: jerarquía clara y brillo de marca en lugar de halo blanco */
+.hero img{box-shadow:0 0 70px rgba(45,212,191,.35),0 0 0 1px #ffffff1a}
+.hero__text-container h1{line-height:1.08;margin:.5rem 0}
+@media (min-width:1024px){
+  .hero__text-container h1{font-size:clamp(3.5rem,5.5vw,5rem)}
+  .hero__text-container p{font-size:1.35rem;line-height:1.6;max-width:42ch;color:#cbd5e1}
+  .hero__text-container p#hero__label{font-size:.8rem;max-width:none;color:var(--color-label)}
+}
+
+/* el hero no espera al JS para verse; animación al cargar, escalonada */
+.hero.animar-scroll{opacity:1;transform:none}
+@keyframes subir{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+.hero__text-container > *{animation:subir .8s ease-out both}
+.hero__text-container > :nth-child(2){animation-delay:.1s}
+.hero__text-container > :nth-child(3){animation-delay:.2s}
+.hero__text-container > :nth-child(4){animation-delay:.3s}
+.hero img{animation:subir 1s .25s ease-out both}
+
+/* animaciones de scroll: propiedades concretas y escalonado en grupos */
+.animar-scroll{transition:opacity .8s ease-out,transform .8s ease-out}
+.solutions__container > :nth-child(2),.values-container > :nth-child(2n),.develop-steps__container > :nth-child(2){transition-delay:.1s}
+.solutions__container > :nth-child(3),.develop-steps__container > :nth-child(3){transition-delay:.2s}
+.solutions__container > :nth-child(4),.develop-steps__container > :nth-child(4){transition-delay:.3s}
+
+/* botones y tarjetas */
+.button{border-radius:.6rem;font-weight:500;transition:background-color .3s ease,border-color .3s ease,transform .2s ease}
+.button:active{transform:scale(.98)}
+.solutions__container__solution{background:linear-gradient(160deg,var(--background-tertiary),var(--background-secondary));border-color:#ffffff12;transition:border-color .3s ease,transform .3s ease,opacity .8s ease-out}
+.solutions__container__solution:hover{transform:translateY(-4px)}
+.value{border-color:#ffffff10}
+
+/* formulario */
+.contact__form{width:100%;max-width:640px;border:1px solid #ffffff22;border-radius:1.25rem}
+.contact__form h2{width:100%}
+.contact{padding:5rem 1rem}
+.contact input,.contact select,.contact textarea{border:1px solid #ffffff1a;font-family:var(--text)}
+.error-box{color:#fca5a5}
+
+/* accesibilidad */
+:focus-visible{outline:3px solid var(--tertiary);outline-offset:3px}
+.button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid var(--tertiary);outline-offset:2px}
+
+/* evita que los atributos width/height deformen las imágenes */
+img{max-width:100%;height:auto}
+
+/* logo más compacto */
+.hero img{width:60%;max-width:340px}
+.us img{max-width:320px;max-height:320px}
+@media (min-width:768px){.us img{width:320px;height:320px}}
+@media (min-width:1024px){.hero img{width:32%;max-width:420px}}
+
+/* hero: degradado suave que se funde con la siguiente sección */
+.hero{
+    background:
+        radial-gradient(circle 700px at 0% 90%, rgba(45,212,191,.28), rgba(45,212,191,0) 70%),
+        radial-gradient(circle 700px at 100% 0%, rgba(45,212,191,.28), rgba(45,212,191,0) 70%);
+}
+.hero::before{display:none}
+.hero::after{
+    content:"";
+    position:absolute;
+    top:auto; right:0; bottom:0; left:0;
+    width:auto; height:260px;
+    border-radius:0;
+    background:linear-gradient(to bottom, rgba(16,20,21,0), var(--background-secondary));
+    z-index:0;
+}
+.hero + .phrase{border-top:0}
+
+.phrase-quote{color:var(--tertiary);font-size:1.5rem;font-family:var(--titles);font-weight:700;margin-top:1rem}
+
+/* CTA tras los servicios */
+.solutions__cta{width:fit-content}
+
+/* mensajes del formulario */
+.error-box{margin-top:0}
+.error-box.is-error{border-color:#ef4444;color:#fca5a5}
+.error-box.is-success{border-color:var(--tertiary);color:var(--tertiary)}
+.error-box:focus-visible{outline-offset:2px}
+.button:disabled{opacity:.6;cursor:not-allowed}
+
+/* hover/foco coherentes: mismo lenguaje (borde turquesa) y solo con puntero real */
+.value{transition:border-color .3s ease,opacity .8s ease-out,transform .8s ease-out}
+.value:hover{box-shadow:none}
+@media (hover:hover){
+    .value:hover{border-color:var(--value-color)}
+}
+@media (hover:none){
+    .solutions__container__solution:hover{transform:none}
+}
+.nav-links__link a{padding:.5rem 0}
+.nav-links__link a:focus-visible{color:var(--tertiary)}
+
+/* menú móvil cerrado: fuera del orden de tabulación y de lectores de pantalla */
+@media (max-width:768px){
+    .side-menu{visibility:hidden;transition:opacity .5s ease,visibility 0s .5s}
+    .side-menu.open{visibility:visible;transition:opacity .5s ease,visibility 0s}
+}
+
+/* movimiento reducido: se conserva la aparición con fundido, sin desplazamiento */
+@keyframes aparecer{from{opacity:0}to{opacity:1}}
+@media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto}
+    .animar-scroll{transform:none;transition:opacity .6s ease-out}
+    .hero__text-container > *,.hero img{animation-name:aparecer}
+    .button:active,.solutions__container__solution:hover{transform:none}
+}
+
+/* Cómo trabajamos: aparecen uno por uno (en columna cada uno entra con su propio scroll) */
+.develop-steps__container > .develop-steps__step{transition-delay:0s}
+@media (min-width:768px){
+    .develop-steps__container > .develop-steps__step:nth-child(2){transition-delay:.3s}
+    .develop-steps__container > .develop-steps__step:nth-child(3){transition-delay:.6s}
+    .develop-steps__container > .develop-steps__step:nth-child(4){transition-delay:.9s}
+}
+@media (min-width:768px) and (max-width:1023px){
+    /* rejilla 2x2: la segunda fila arranca tras la primera */
+    .develop-steps__container > .develop-steps__step:nth-child(3){transition-delay:0s}
+    .develop-steps__container > .develop-steps__step:nth-child(4){transition-delay:.3s}
+}
+
+/* Cómo trabajamos: los pasos caen desde arriba con un pequeño rebote (también con movimiento reducido) */
+.develop-steps__step.animar-scroll{
+    transform:translateY(-70px);
+    transition-property:opacity,transform;
+    transition-duration:.8s;
+    transition-timing-function:ease-out,cubic-bezier(.34,1.45,.64,1);
+}
+.develop-steps__step.animar-scroll.visible{transform:translateY(0)}
+
+/* formulario: mensaje descartable, botón inactivo y pista */
+.error-box{position:relative;padding-right:2.5rem;width:100%}
+.error-box__close{position:absolute;top:.4rem;right:.5rem;width:2rem;height:2rem;border:none;border-radius:.5rem;background:transparent;color:inherit;font-size:1.5rem;line-height:1;cursor:pointer;transition:background-color .2s ease}
+.error-box__close:hover{background:#ffffff1a}
+.contact__form input:disabled,.contact__form select:disabled,.contact__form textarea:disabled{opacity:.6;cursor:not-allowed}
+.contact__form .field-error{text-align:left;font-size:.85rem;color:#fca5a5;max-width:none}
+.field-error:empty{display:none}
+.contact [aria-invalid="true"]{border-color:#ef4444}
