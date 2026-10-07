@@ -1,15 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wharf Code</title>
+    <meta name="description" content="Estudio de ingeniería de Veracruz: software a medida, desarrollo web y automatización de procesos para PYMEs.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@700;900&family=Inter:wght@400;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/index.css">
-    <link rel="icon" type="image/png" href="images/WharfLogo.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="180x180" href="images/favicon.png">
+    <link rel="apple-touch-icon" href="images/favicon.png">
+    <meta name="theme-color" content="#0B0F10">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="es_MX">
+    <meta property="og:title" content="Wharf Code">
+    <meta property="og:description" content="Estudio de ingeniería de Veracruz: software a medida, desarrollo web y automatización de procesos para PYMEs.">
+    <meta property="og:url" content="https://wharfcode.com/">
+    <meta property="og:image" content="https://wharfcode.com/images/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
 </head>
 <body>
     <header>
@@ -24,25 +37,134 @@
                 </ul>
             </div>
             <a class="button secondary" id="nav__button-contacto" href="#contacto">Contactar</a>
-            <button class="nav__menu">
-                <i data-lucide="menu"></i>
+            <button class="nav__menu" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="side-menu">
+                <svg aria-hidden="true"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M4 5h16" />
+  <path d="M4 12h16" />
+  <path d="M4 19h16" />
+</svg>
             </button>
         </nav>
-        <nav class="side-menu">
+        <nav class="side-menu" id="side-menu" aria-label="Menú móvil">
             <div class="side-menu__top">
-                <a href="#inicio" class="nav-logo">Wharf Code</a>
-                <button class="side-menu__close">
-                    <i data-lucide="x"></i>
+                <a href="#hero" class="nav-logo">Wharf Code</a>
+                <button class="side-menu__close" type="button" aria-label="Cerrar menú">
+                    <svg aria-hidden="true"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M18 6 6 18" />
+  <path d="m6 6 12 12" />
+</svg>
                 </button>
             </div>
         
             <ul>
-                <li class="nav-links__link"><i data-lucide="house"></i><a href="#hero">Inicio</a></li>
-                <li class="nav-links__link"><i data-lucide="wrench"></i><a href="#soluciones">Soluciones</a></li>
-                <li class="nav-links__link"><i data-lucide="rotate-ccw-clock"></i><a href="#nosotros">Nosotros</a></li>
-                <li class="nav-links__link"><i data-lucide="mail"></i><a href="#contacto">Contacto</a></li>
+                <li class="nav-links__link"><svg aria-hidden="true"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8" />
+  <path d="M3 10a2 2 0 0 1 .709-1.528l7-6a2 2 0 0 1 2.582 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+</svg><a href="#hero">Inicio</a></li>
+                <li class="nav-links__link"><svg aria-hidden="true"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.106-3.105c.32-.322.863-.22.983.218a6 6 0 0 1-8.259 7.057l-7.91 7.91a1 1 0 0 1-2.999-3l7.91-7.91a6 6 0 0 1 7.057-8.259c.438.12.54.662.219.984z" />
+</svg><a href="#soluciones">Soluciones</a></li>
+                <li class="nav-links__link"><svg aria-hidden="true"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M13 5h8" />
+  <path d="M13 12h8" />
+  <path d="M13 19h8" />
+  <path d="m3 17 2 2 4-4" />
+  <path d="m3 7 2 2 4-4" />
+</svg><a href="#proceso">Proceso</a></li>
+                <li class="nav-links__link"><svg aria-hidden="true"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8" />
+  <path d="M3 3v5h5" />
+  <path d="M12 7v5l4 2" />
+</svg><a href="#nosotros">Nosotros</a></li>
+                <li class="nav-links__link"><svg aria-hidden="true"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7" />
+  <rect x="2" y="4" width="20" height="16" rx="2" />
+</svg><a href="#contacto">Contacto</a></li>
             </ul>
-            <a class="button secondary" href="#contacto">CUÉNTANOS TU PROYECTO <i data-lucide="arrow-right"></i></a>
+            <a class="button secondary" href="#contacto">CUÉNTANOS TU PROYECTO <svg aria-hidden="true"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M5 12h14" />
+  <path d="m12 5 7 7-7 7" />
+</svg></a>
             <div class="side-menu__contact-section">
                 <div class="side-menu__contact-section__column">
                     <p>Social</p>
@@ -60,19 +182,45 @@
     <main>
         <section class="hero animar-scroll" id="hero">
             <div class="hero__text-container">
-                <p id="hero__label"><i data-lucide="square-terminal"></i>Ingeniería y Automatización</p>
                 <h1>Soluciones Digitales que Impulsan tu PYME.</h1>
                 <p>Automatizamos procesos complejos y desarrollamos software profesional a medida. Superamos la brecha entre la ingeniería técnica y la elegancia empresarial para transformar tu negocio sin fricción.</p>
                 <div class="hero__text-container__buttons">
-                    <a class="button primary" href="#soluciones">NUESTROS SERVICIOS<i data-lucide="arrow-right"></i></a>
-                    <a class="button outlined" href="#nosotros">CONOCE WHARF<i data-lucide="arrow-right"></i></a>
+                    <a class="button primary" href="#soluciones">NUESTROS SERVICIOS<svg aria-hidden="true"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M5 12h14" />
+  <path d="m12 5 7 7-7 7" />
+</svg></a>
+                    <a class="button outlined" href="#nosotros">CONOCE WHARF<svg aria-hidden="true"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M5 12h14" />
+  <path d="m12 5 7 7-7 7" />
+</svg></a>
                 </div>
             </div>
-            <img src="images/WharfLogo.webp" alt="Logotipo de la empresa Wharf Code">
+            <img src="images/WharfLogo.webp" srcset="images/WharfLogo-400.webp 400w, images/WharfLogo.webp 800w" sizes="(min-width:1024px) 40vw, 80vw" width="800" height="800" fetchpriority="high" alt="Logotipo de la empresa Wharf Code">
         </section>
         <section class="phrase animar-scroll">
             <h2>La tecnología tiene valor cuando resuelve algo real.</h2>
             <p class="phrase-description">Creemos que el cliente es quien mejor conoce su problema. Nuestro trabajo es escuchar, entender la complejidad de su negocio y construir la solución tecnológica precisa que convierta ese problema en una ventaja competitiva. No imponemos herramientas; diseñamos soluciones.</p>
+            <p class="phrase-quote">"No vendemos software, vendemos soluciones a tus problemas."</p>
         </section>
         <section class="solutions" id="soluciones">
             <h2 class="animar-scroll">Nuestros Servicios</h2>
@@ -81,24 +229,93 @@
                 <div class="solutions__container__solution animar-scroll" id="solution-1">
                     <h3 class="solutions__container__solution__title">Desarrollo de software a medida</h3>
                     <p class="solutions__container__solution__description">Soluciones a medida construidas con arquitecturas modernas y escalables para satisfacer los requisitos específicos de su negocio.</p>
-                    <i data-lucide="chevrons-left-right" class="solutions__container__solution__icon"></i>
+                    <svg class="solutions__container__solution__icon" aria-hidden="true"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="m9 7-5 5 5 5" />
+  <path d="m15 7 5 5-5 5" />
+</svg>
                 </div>
                 <div class="solutions__container__solution animar-scroll" id="solution-2">
                     <h3 class="solutions__container__solution__title">Desarrollo web</h3>
                     <p class="solutions__container__solution__description">Presencia digital de alto rendimiento, optimizada para velocidad y conversión, reflejando la identidad de su marca.</p>
-                    <i data-lucide="globe" class="solutions__container__solution__icon"></i>
+                    <svg class="solutions__container__solution__icon" aria-hidden="true"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <circle cx="12" cy="12" r="10" />
+  <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20" />
+  <path d="M2 12h20" />
+</svg>
                 </div>
                 <div class="solutions__container__solution animar-scroll" id="solution-3">
                     <h3 class="solutions__container__solution__title">Automatización de procesos</h3>
                     <p class="solutions__container__solution__description">Elimine el trabajo manual y reduzca errores conectando sistemas y automatizando flujos de trabajo repetitivos.</p>
-                    <i data-lucide="settings" class="solutions__container__solution__icon"></i>
+                    <svg class="solutions__container__solution__icon" aria-hidden="true"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M9.671 4.136a2.34 2.34 0 0 1 4.659 0 2.34 2.34 0 0 0 3.319 1.915 2.34 2.34 0 0 1 2.33 4.033 2.34 2.34 0 0 0 0 3.831 2.34 2.34 0 0 1-2.33 4.033 2.34 2.34 0 0 0-3.319 1.915 2.34 2.34 0 0 1-4.659 0 2.34 2.34 0 0 0-3.32-1.915 2.34 2.34 0 0 1-2.33-4.033 2.34 2.34 0 0 0 0-3.831A2.34 2.34 0 0 1 6.35 6.051a2.34 2.34 0 0 0 3.319-1.915" />
+  <circle cx="12" cy="12" r="3" />
+</svg>
                 </div>
                 <div class="solutions__container__solution animar-scroll" id="solution-4">
                     <h3 class="solutions__container__solution__title">Consultoría tecnológica</h3>
                     <p class="solutions__container__solution__description">Asesoramiento estratégico para guiar su transformación digital y seleccionar la pila tecnológica adecuada para su crecimiento.</p>
-                    <i data-lucide="monitor-smartphone" class="solutions__container__solution__icon"></i>
+                    <svg class="solutions__container__solution__icon" aria-hidden="true"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M18 8V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h8" />
+  <path d="M10 19v-3.96 3.15" />
+  <path d="M7 19h5" />
+  <rect width="6" height="10" x="16" y="12" rx="2" />
+</svg>
                 </div>
             </div>
+            <a class="button primary solutions__cta animar-scroll" href="#contacto">CUÉNTANOS TU PROYECTO<svg aria-hidden="true"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M5 12h14" />
+  <path d="m12 5 7 7-7 7" />
+</svg></a>
         </section>
         <section class="develop-steps" id="proceso">
             <h2 class="animar-scroll">Cómo Trabajamos</h2>
@@ -126,13 +343,8 @@
                 </div>
             </div>
         </section>
-        <section class="phrase2 animar-scroll">
-            <i data-lucide="lightbulb"></i>
-            <h2>"No vendemos software, vendemos soluciones a tus problemas."</h2>
-            <p>Nuestra filosofía se basa en la colaboración profunda. Creemos que la tecnología por sí sola no tiene valor a menos que resuelva un problema real de manera eficiente. Nos enfocamos en entender el núcleo de tus desafíos comerciales antes de sugerir herramientas técnicas.</p>
-        </section>
         <section class="us" id="nosotros">
-            <img src="images/WharfLogo.webp" alt="Logotipo de Wharf Code" class="animar-scroll">
+            <img src="images/WharfLogo.webp" srcset="images/WharfLogo-400.webp 400w, images/WharfLogo.webp 800w" sizes="400px" width="800" height="800" loading="lazy" alt="Logotipo de Wharf Code" class="animar-scroll">
             <div class="us-container animar-scroll">
                 <h2>Nuestro Origen</h2>
                 <p>La historia de Wharf Code comenzó en las aulas universitarias en Veracruz, México. Nos dimos cuenta de que muchas empresas luchaban con tecnología mal implementada que causaba más fricción que flujo.</p>
@@ -144,14 +356,140 @@
             <h2 class="animar-scroll">¿Por qué Wharf Code?</h2>
             <p class="animar-scroll">Nuestros valores fundamentales guían cada decisión y línea de código que escribimos.</p>
             <div class="values-container">
-                <div class="value value-odd animar-scroll"><i data-lucide="shield-check"></i><p>Confianza</p></div>
-                <div class="value value-even animar-scroll"><i data-lucide="handshake"></i><p>Compromiso</p></div>
-                <div class="value value-odd animar-scroll"><i data-lucide="sparkles"></i><p>Calidad</p></div>
-                <div class="value value-even animar-scroll"><i data-lucide="lock"></i><p>Seguridad</p></div>
-                <div class="value value-odd animar-scroll"><i data-lucide="messages-square"></i><p>Comunicación</p></div>
-                <div class="value value-even animar-scroll"><i data-lucide="rotate-cw-fading-clock"></i><p>Respeto al tiempo</p></div>
-                <div class="value value-odd animar-scroll"><i data-lucide="sliders-horizontal"></i><p>Personalización</p></div>
-                <div class="value value-even animar-scroll"><i data-lucide="briefcase-business"></i><p>Seriedad</p></div>
+                <div class="value value-odd animar-scroll"><svg aria-hidden="true"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" />
+  <path d="m9 12 2 2 4-4" />
+</svg><p>Confianza</p></div>
+                <div class="value value-even animar-scroll"><svg aria-hidden="true"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="m11 17 2 2a1 1 0 1 0 3-3" />
+  <path d="m14 14 2.5 2.5a1 1 0 1 0 3-3l-3.88-3.88a3 3 0 0 0-4.24 0l-.88.88a1 1 0 1 1-3-3l2.81-2.81a5.79 5.79 0 0 1 7.06-.87l.47.28a2 2 0 0 0 1.42.25L21 4" />
+  <path d="m21 3 1 11h-2" />
+  <path d="M3 3 2 14l6.5 6.5a1 1 0 1 0 3-3" />
+  <path d="M3 4h8" />
+</svg><p>Compromiso</p></div>
+                <div class="value value-odd animar-scroll"><svg aria-hidden="true"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z" />
+  <path d="M20 2v4" />
+  <path d="M22 4h-4" />
+  <circle cx="4" cy="20" r="2" />
+</svg><p>Calidad</p></div>
+                <div class="value value-even animar-scroll"><svg aria-hidden="true"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <rect width="18" height="11" x="3" y="11" rx="2" ry="2" />
+  <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+</svg><p>Seguridad</p></div>
+                <div class="value value-odd animar-scroll"><svg aria-hidden="true"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M16 10a2 2 0 0 1-2 2H6.828a2 2 0 0 0-1.414.586l-2.202 2.202A.71.71 0 0 1 2 14.286V4a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z" />
+  <path d="M20 9a2 2 0 0 1 2 2v10.286a.71.71 0 0 1-1.212.502l-2.202-2.202A2 2 0 0 0 17.172 19H10a2 2 0 0 1-2-2v-1" />
+</svg><p>Comunicación</p></div>
+                <div class="value value-even animar-scroll"><svg aria-hidden="true"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M12 3a9.75 9.75 0 0 1 6.74 2.74" />
+  <path d="M18.74 5.74 21 8" />
+  <path d="M21 8V3" />
+  <path d="M7.5 19.794c-6-3.464-6-12.124 0-15.588" />
+  <path d="M7.5 4.206A9 9 0 0 1 12 3" />
+  <path d="M12 7v5l4 2" />
+  <path d="M14 20.775A9 9 0 0 1 12 21" />
+  <path d="M19 17.656a9 9 0 0 1-1.5 1.456" />
+  <path d="M21 12a9 9 0 0 1-.228 2" />
+  <path d="M21 8h-5" />
+</svg><p>Respeto al tiempo</p></div>
+                <div class="value value-odd animar-scroll"><svg aria-hidden="true"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M10 5H3" />
+  <path d="M12 19H3" />
+  <path d="M14 3v4" />
+  <path d="M16 17v4" />
+  <path d="M21 12h-9" />
+  <path d="M21 19h-5" />
+  <path d="M21 5h-7" />
+  <path d="M8 10v4" />
+  <path d="M8 12H3" />
+</svg><p>Personalización</p></div>
+                <div class="value value-even animar-scroll"><svg aria-hidden="true"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M12 12h.01" />
+  <path d="M16 6V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2" />
+  <path d="M22 13a18.15 18.15 0 0 1-20 0" />
+  <rect width="20" height="14" x="2" y="6" rx="2" />
+</svg><p>Seriedad</p></div>
             </div>
         </section>
         <section class="phrase3 animar-scroll">
@@ -194,7 +532,19 @@
                             <option value="consultoria">Consultoría Tecnológica</option>
                         </select>
                     
-                        <i data-lucide="chevron-down"></i>
+                        <svg aria-hidden="true"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="m6 9 6 6 6-6" />
+</svg>
                     </div>
                 </div>
                 <div class="input-container">
@@ -204,8 +554,8 @@
                         <p id="project-description-lenght"></p>
                     </div>
                 </div>
-                <div id="error-message" class="error-box" style="display: none;"></div>
-                <button class="button primary">Enviar Mensaje</button>
+                <div id="error-message" class="error-box" role="status" aria-live="polite" tabindex="-1" style="display: none;"></div>
+                <button class="button primary" type="submit">Enviar Mensaje</button>
             </form>
         </section>
     </main>
@@ -233,13 +583,8 @@
             </ul>
         </div>
     </footer>
-    <script src="https://unpkg.com/lucide@latest"></script>
-
-    <script>
-        lucide.createIcons();
-    </script>
-    <script src="js/nav.js"></script>
-    <script src="js/form.js"></script>
-    <script src="js/scrollAnimiation.js"></script>
+    <script src="js/nav.js" defer></script>
+    <script src="js/form.js" defer></script>
+    <script src="js/scrollAnimation.js" defer></script>
 </body>
 </html>
